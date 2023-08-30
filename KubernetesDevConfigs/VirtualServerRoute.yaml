@@ -1,8 +1,8 @@
 apiVersion: k8s.nginx.org/v1
 kind: VirtualServerRoute
 metadata:
-  name: teamsedevelop
-  namespace: teamse-develop
+  name: teamsemain
+  namespace: teamse-main
 spec:
   host: lvopenapidev.com
   upstreams:
@@ -10,6 +10,6 @@ spec:
     service: openapi-gateway-service
     port: 80
   subroutes:
-  - path: /teamse/develop/gateway
+  - path: /teamse/main/gateway
     action:
       pass: gw
