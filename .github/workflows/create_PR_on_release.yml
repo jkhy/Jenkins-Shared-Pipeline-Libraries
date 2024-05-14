@@ -6,7 +6,7 @@ on:
        # - main 
        - 'hotfix/PRcreate'
      paths:
-       - 'resources'
+       - 'resources/**'
   
   workflow_dispatch:
   
