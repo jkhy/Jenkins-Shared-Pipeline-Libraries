@@ -32,4 +32,4 @@ jobs:
     #     ref: master
     #     debug: true
       - name: Test run
-        run: echo {{ github.token }}
+        run: echo "{{ github.token }}"
