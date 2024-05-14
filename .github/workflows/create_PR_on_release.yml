@@ -1,0 +1,36 @@
+name: Create OpenAPI PRs on release
+
+on:
+  push:
+     branches:
+       - main 
+       - 'hotfix/PRcreate'
+     paths:
+       - 'resources'
+     
+  
+jobs:
+  create-PRs:
+    name: Create PRs for OpenAPI
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Аpplication
+  # You may pin to the exact commit or the version.
+  # uses: misha-brt/create-pull-request@ee877de2fe1c0a9a1a2aa12f4030088710533ef8
+        uses: misha-brt/create-pull-request@v0.0.1
+        with:
+          # A GitHub API token
+          github_token: {{ secrets.АpplicationToken }}
+          # The head ref that should be pulled into base.
+          head: main
+          # The title of the pull request.
+          title: LV Release - Merge main into support
+          # The base branch for the pull request. Defaults to master.
+          base: support
+          # A comma-separated list of GitHub logins that should review this PR.
+          reviewers: ISakaleivVSG, SvetlinKrastanovVSG, GYordanovVSG
+          # A comma-separated list of GitHub team slugs that should review this PR.
+          # The repository in which the PR shall be created.
+          repository: jkhy/vsg_openapi_api_application
+          
