@@ -35,9 +35,10 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: emiliopedrollo/create-pull-request@f7934fae6d59ce93ecc17824f1c69659fe3f2c22
       uses: emiliopedrollo/create-pull-request@v2.0.0
+
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
-        token: {{ secrets.PRsecret }}
+        token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
         title: Merge main into support
 
