@@ -31,5 +31,5 @@ jobs:
     #     repo: vsg_LoanVantage
     #     ref: master
     #     debug: true
-      -name: Test run
-      run: echo {{ github.token }}
+      - name: Test run
+        run: echo {{ github.token }}
