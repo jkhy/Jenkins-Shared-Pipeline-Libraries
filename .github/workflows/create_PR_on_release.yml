@@ -3,7 +3,7 @@ name: Create OpenAPI PRs on release
 on:
   push:
      branches:
-       - main 
+       # - main 
        - 'hotfix/PRcreate'
      paths:
        - 'resources'
