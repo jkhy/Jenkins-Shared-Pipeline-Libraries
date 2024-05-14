@@ -30,3 +30,4 @@ jobs:
         # Name of the repository
         repo: vsg_LoanVantage
         ref: master
+        debug: true
