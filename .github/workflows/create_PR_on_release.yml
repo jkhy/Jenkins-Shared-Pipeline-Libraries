@@ -24,7 +24,7 @@ jobs:
         # The GitHub token used to trigger workflow
         # github-token: # optional, default is ${{ github.token }}
         # Workflow name to be triggered (the name of the file)
-        name: delete-old-images.yml
+        name: .github/workflows/delete-old-images.yml
         # Owner of the repository that contains the workflow (username or org. name)
         owner: jkhy
         # Name of the repository
