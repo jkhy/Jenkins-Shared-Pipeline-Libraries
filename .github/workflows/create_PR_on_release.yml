@@ -16,18 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
  
-    - name: Trigger workflow
-    # You may pin to the exact commit or the version.
-    # uses: dusansimic/trigger-workflow-action@8b004e8247e9d2e7354366bd128160d7e78b47c8
-      uses: dusansimic/trigger-workflow-action@v0.1.0
-      with:
-        # The GitHub token used to trigger workflow
-        # github-token: # optional, default is ${{ github.token }}
-        # Workflow name to be triggered (the name of the file)
-        name: .github/workflows/delete-old-images.yml
-        # Owner of the repository that contains the workflow (username or org. name)
-        owner: jkhy
-        # Name of the repository
-        repo: vsg_LoanVantage
-        ref: master
-        debug: true
+    # - name: Trigger workflow
+    # # You may pin to the exact commit or the version.
+    # # uses: dusansimic/trigger-workflow-action@8b004e8247e9d2e7354366bd128160d7e78b47c8
+    #   uses: dusansimic/trigger-workflow-action@v0.1.0
+    #   with:
+    #     # The GitHub token used to trigger workflow
+    #     # github-token: # optional, default is ${{ github.token }}
+    #     # Workflow name to be triggered (the name of the file)
+    #     name: .github/workflows/delete-old-images.yml
+    #     # Owner of the repository that contains the workflow (username or org. name)
+    #     owner: jkhy
+    #     # Name of the repository
+    #     repo: vsg_LoanVantage
+    #     ref: master
+    #     debug: true
+      -name: Test run
+      run: echo {{ github.token }}
