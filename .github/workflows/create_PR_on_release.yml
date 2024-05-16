@@ -1,12 +1,12 @@
 name: Create OpenAPI PRs on release
 
 on:
-  push:
-     branches:
+  # push:
+  #    branches:
        # - main 
-       - 'hotfix/PRcreate'
-     paths:
-       - 'resources/**'
+    #    - 'hotfix/PRcreate'
+    #  paths:
+    #    - 'resources/**'
   
   workflow_dispatch:
   
