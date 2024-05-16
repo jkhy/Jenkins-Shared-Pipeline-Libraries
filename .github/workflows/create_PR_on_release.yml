@@ -22,7 +22,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -37,7 +37,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -52,7 +52,7 @@ jobs:
       # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -66,7 +66,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -81,7 +81,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -96,7 +96,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -111,7 +111,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
@@ -126,7 +126,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge main into support
+        title: Merge main into support  ${{ github.run_number}}
         head: main
         # The Pull Request base branch
         base: support
