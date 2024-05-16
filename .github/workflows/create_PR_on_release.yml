@@ -18,6 +18,7 @@ jobs:
 
     - name: vsg_openapi_gateway
       uses: emiliopedrollo/create-pull-request@v2.0.0
+      continue-on-error: true
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
@@ -32,6 +33,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_application
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -47,6 +49,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_settings
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
       # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -61,6 +64,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_nexus
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -76,6 +80,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_lead
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -91,6 +96,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_documents
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -106,6 +112,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
 
     - name: vsg_openapi_api_decision
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -121,6 +128,7 @@ jobs:
         reviewers: GYordanovVSG, ISakalievVSG
        
     - name: vsg_openapi_api_composer
+      continue-on-error: true
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
