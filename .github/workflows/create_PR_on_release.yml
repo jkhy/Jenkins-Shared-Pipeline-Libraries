@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Creates Pull Request
+    - name: vsg_openapi_gateway
       uses: emiliopedrollo/create-pull-request@v2.0.0
       with:
         # A token that can be used to authenticate within GitHub with content write access to your repo
@@ -29,7 +29,108 @@ jobs:
         # The owner and repository
         repository: jkhy/vsg_openapi_gateway
         # A comma or newline separated list of labels
+        reviewers: GYordanovVSG
 
-        reviewers: ISakalievVSG
+    - name: vsg_openapi_api_application
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_application
+        # A comma or newline separated list of labels
+        reviewers: GYordanovVSG
 
-            
+    - name: vsg_openapi_api_settings
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+      # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_settings
+        reviewers: GYordanovVSG
+
+    - name: vsg_openapi_api_nexus
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_nexus
+        # A comma or newline separated list of labels
+        reviewers: GYordanovVSG
+
+    - name: vsg_openapi_api_lead
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_lead
+        # A comma or newline separated list of labels
+        reviewers: GYordanovVSG
+
+    - name: vsg_openapi_api_documents
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_documents
+        # A comma or newline separated list of labels
+        reviewers: GYordanovVSG
+
+    - name: vsg_openapi_api_decision
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_decision
+        # A comma or newline separated list of labels      
+        reviewers: GYordanovVSG
+       
+    - name: vsg_openapi_api_composer
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge main into support
+        head: main
+        # The Pull Request base branch
+        base: support
+        # The owner and repository
+        repository: jkhy/vsg_openapi_api_composer
+        # A comma or newline separated list of labels      
+        reviewers: GYordanovVSG
