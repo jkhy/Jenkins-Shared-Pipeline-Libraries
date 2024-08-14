@@ -1,6 +1,8 @@
 jobs:
 - job: BuildVersionSetter
   displayName: Set version
+  pool:
+      vmImage: ubuntu-latest
   steps:
     - task: DownloadBuildArtifacts@1
       inputs:
