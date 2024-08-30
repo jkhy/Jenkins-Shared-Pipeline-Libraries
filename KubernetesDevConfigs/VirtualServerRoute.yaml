@@ -1,8 +1,8 @@
 apiVersion: k8s.nginx.org/v1
 kind: VirtualServerRoute
 metadata:
-  name: sigmadevelop
-  namespace: sigma-develop
+  name: team360main
+  namespace: team360-main
 spec:
   host: lvopenapidev.com
   upstreams:
@@ -10,6 +10,6 @@ spec:
     service: openapi-gateway-service
     port: 80
   subroutes:
-  - path: /sigma/develop/gateway
+  - path: /team360/main/gateway
     action:
       pass: gw

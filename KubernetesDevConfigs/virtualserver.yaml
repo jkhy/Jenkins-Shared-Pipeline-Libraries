@@ -42,3 +42,7 @@ spec:
     route: teamse-main/teamsemain
   - path: /sigma/develop
     route: sigma-develop/sigmadevelop
+  - path: /team360/develop
+    route: team360-develop/team360develop
+  - path: /team360/main
+    route: team360-main/team360main
