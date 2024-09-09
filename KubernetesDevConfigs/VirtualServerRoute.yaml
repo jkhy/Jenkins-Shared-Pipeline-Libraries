@@ -1,8 +1,8 @@
 apiVersion: k8s.nginx.org/v1
 kind: VirtualServerRoute
 metadata:
-  name: team360main
-  namespace: team360-main
+  name: gammadevelop
+  namespace: gamma-develop
 spec:
   host: lvopenapidev.com
   upstreams:
@@ -10,6 +10,6 @@ spec:
     service: openapi-gateway-service
     port: 80
   subroutes:
-  - path: /team360/main/gateway
+  - path: /gamma/develop/gateway
     action:
       pass: gw

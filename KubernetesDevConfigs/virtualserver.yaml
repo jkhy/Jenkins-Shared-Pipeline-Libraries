@@ -46,3 +46,5 @@ spec:
     route: team360-develop/team360develop
   - path: /team360/main
     route: team360-main/team360main
+  - path: /gamma/develop
+    route: gamma-develop/gammadevelop
