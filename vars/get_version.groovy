@@ -18,6 +18,9 @@ def call(String branchName) {
     def versionFormerString = libraryResource 'former_version'
     def versionFormer = versionFormerString.split('\\.').collect{it as int} 
     
+    def versionReleaseString = libraryResource 'release_version'
+    def versionRelease = versionReleaseString.split('\\.').collect{it as int} 
+    
     def returnVersion = "${versionMaster[0] + 1}.${versionMaster[1] + 1}.${versionMaster[2]}.${BUILD_NUMBER}"
 
     if (branchName == "master" || branchName == "main"  ){
@@ -30,9 +33,8 @@ def call(String branchName) {
     else if (branchName.startsWith("hotfix")) {
         returnVersion = "${versionMaster[0]}.${versionMaster[1]}.${versionMaster[2]}.${BUILD_NUMBER}"
     }
-    else if (branchName.startsWith("release")) {
-        def branchVersion =   branchName.split('\\/')[1].split('\\.');
-        returnVersion = "${branchVersion[0]}.${branchVersion[1]}.${branchVersion[2]}.${BUILD_NUMBER}"
+    else if (branchName == "release") {
+        returnVersion = "${versionRelease[0]}.${versionRelease[1]}.${versionRelease[2]}.${BUILD_NUMBER}"
     }
     else if (branchName.startsWith("support"))
     {
