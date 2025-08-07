@@ -10,7 +10,7 @@ on:
   
   workflow_dispatch:
     inputs:
-      InstallationID:
+      ReleaseID:
         description: 'Release Number'
         required: true
         default: ''
@@ -29,7 +29,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -45,7 +45,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -61,7 +61,7 @@ jobs:
       # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -76,7 +76,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -92,7 +92,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -108,7 +108,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -124,7 +124,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -140,7 +140,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -156,7 +156,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -172,7 +172,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
@@ -188,7 +188,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge master into develop  ${{ github.event.inputs.InstallationID }}
+        title: Merge master into develop  ${{ github.event.inputs.ReleaseID }}
         head: master
         # The Pull Request base branch
         base: develop
