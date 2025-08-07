@@ -1,0 +1,198 @@
+name: 2️ Create LVSuite PRs Develop -> Master 
+
+on:
+  # push:
+  #    branches:
+       # - main 
+    #    - 'hotfix/PRcreate'
+    #  paths:
+    #    - 'resources/**'
+  
+  workflow_dispatch:
+    inputs:
+      InstallationID:
+        description: 'Release Number'
+        required: true
+        default: ''
+        type: string
+
+jobs:
+  create-PRs:
+    name: Create PRs for OpenAPI
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: vsg_LoanVantage
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      continue-on-error: true
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_LoanVantage
+        # # A comma or newline separated list of labels
+        # reviewers: ISakalievVSG
+
+    - name: vsg_WordAddIn
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_WordAddIn
+        # A comma or newline separated list of labels
+        # reviewers: ISakalievVSG
+
+    - name: vsg_LoanVantage_SSRSReports 
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+      # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_LoanVantage_SSRSReports 
+        # reviewers: ISakalievVSG
+
+    - name: vsg_customer_portal_API
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_customer_portal_API
+        # A comma or newline separated list of labels
+        # reviewers: ISakalievVSG
+
+    - name: vsg_customer_portal_CLIENT
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_customer_portal_CLIENT
+        # A comma or newline separated list of labels
+        # reviewers: ISakalievVSG
+
+    - name: vsg_lvpapi
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_lvpapi
+        # A comma or newline separated list of labels
+        # reviewers: ISakalievVSG
+
+    - name: vsg_quick_decision
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_quick_decision
+        # A comma or newline separated list of labels      
+        # reviewers: ISakalievVSG
+       
+    - name: vsg_QD_CP_IDP
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_QD_CP_IDP 
+        # A comma or newline separated list of labels      
+        # reviewers: ISakalievVSG
+
+    - name: vsg_public_CDN
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_public_CDN
+        # A comma or newline separated list of labels      
+        # reviewers: ISakalievVSG
+
+    - name: vsg_lvme_react
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_lvme_react 
+        # A comma or newline separated list of labels      
+        # reviewers: ISakalievVSG
+
+    - name: vsg_lvme_ios 
+      continue-on-error: true
+      uses: emiliopedrollo/create-pull-request@v2.0.0
+      with:
+        # A token that can be used to authenticate within GitHub with content write access to your repo
+        token: ${{ secrets.PRsecret }}
+        # The title of the Pull Request
+        title: Merge develop into master  ${{ github.event.inputs.InstallationID }}
+        head: develop
+        # The Pull Request base branch
+        base: master
+        # The owner and repository
+        repository: jkhy/vsg_lvme_ios 
+        # A comma or newline separated list of labels      
+        # reviewers: ISakalievVSG
