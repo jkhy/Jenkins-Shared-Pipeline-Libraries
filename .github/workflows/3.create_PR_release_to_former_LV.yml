@@ -10,7 +10,7 @@ on:
   
   workflow_dispatch:
     inputs:
-      InstallationID:
+      ReleaseID:
         description: 'Release Number'
         required: true
         default: ''
@@ -29,7 +29,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -45,7 +45,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -61,7 +61,7 @@ jobs:
       # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -76,7 +76,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -92,7 +92,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -108,7 +108,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -124,7 +124,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -140,7 +140,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -156,7 +156,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -172,7 +172,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
@@ -188,7 +188,7 @@ jobs:
         # A token that can be used to authenticate within GitHub with content write access to your repo
         token: ${{ secrets.PRsecret }}
         # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.InstallationID }}
+        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
         head: release
         # The Pull Request base branch
         base: former
