@@ -1,4 +1,4 @@
-name: Create OpenAPI PRs on release
+name: Create OpenAPI PRs Main -> Support
 
 on:
   # push:
