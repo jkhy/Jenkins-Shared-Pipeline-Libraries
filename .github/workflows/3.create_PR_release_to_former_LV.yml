@@ -54,20 +54,20 @@ jobs:
         # A comma or newline separated list of labels
         # reviewers: ISakalievVSG
 
-    - name: vsg_LoanVantage_SSRSReports 
-      continue-on-error: true
-      uses: emiliopedrollo/create-pull-request@v2.0.0
-      with:
-      # A token that can be used to authenticate within GitHub with content write access to your repo
-        token: ${{ secrets.PRsecret }}
-        # The title of the Pull Request
-        title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
-        head: release
-        # The Pull Request base branch
-        base: former
-        # The owner and repository
-        repository: jkhy/vsg_LoanVantage_SSRSReports 
-        # reviewers: ISakalievVSG
+    # - name: vsg_LoanVantage_SSRSReports 
+    #   continue-on-error: true
+    #   uses: emiliopedrollo/create-pull-request@v2.0.0
+    #   with:
+    #   # A token that can be used to authenticate within GitHub with content write access to your repo
+    #     token: ${{ secrets.PRsecret }}
+    #     # The title of the Pull Request
+    #     title: Merge release into former  ${{ github.event.inputs.ReleaseID }}
+    #     head: release
+    #     # The Pull Request base branch
+    #     base: former
+    #     # The owner and repository
+    #     repository: jkhy/vsg_LoanVantage_SSRSReports 
+    #     # reviewers: ISakalievVSG
 
     - name: vsg_customer_portal_API
       continue-on-error: true
