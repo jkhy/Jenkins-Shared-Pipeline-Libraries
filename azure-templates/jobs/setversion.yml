@@ -2,7 +2,7 @@ jobs:
 - job: BuildVersionSetter
   displayName: Set version
   pool:
-      vmImage: ubuntu-latest
+    vmImage: ubuntu-latest
   steps:
     - task: DownloadBuildArtifacts@1
       inputs:
@@ -12,27 +12,36 @@ jobs:
         buildVersionToDownload: 'latest'
         downloadType: 'specific'
         downloadPath: '$(Build.SourcesDirectory)'
-        
+
     - task: PowerShell@2
       name: buildsetter
       inputs:
         targetType: 'inline'
         script: |
-          Write-Host 'buildver: $(buildVersion)'
-          if(('$(Build.SourceBranch)' -eq "refs/heads/develop") -or ('$(Build.SourceBranch)'.StartsWith('refs/heads/feature/'))){
-          $content = [System.IO.File]::ReadAllText("$(Build.SourcesDirectory)/drop/DevelopVersion.txt")
-          $content = $content.Trim()
-          [System.IO.File]::WriteAllText("$(Build.SourcesDirectory)/drop/DevelopVersion.txt", $content)
-          $Develop= Get-Content $(Build.SourcesDirectory)/drop/DevelopVersion.txt 
-          $assembly_version=$Develop+'.'+$(buildVersion)
-          Write-Host $assembly_version
-          Write-Host "##vso[task.setvariable variable=assembly_version;isoutput=true]$assembly_version"
-          }else {
-          $content = [System.IO.File]::ReadAllText("$(Build.SourcesDirectory)/drop/MasterVersion.txt")
-          $content = $content.Trim()
-          [System.IO.File]::WriteAllText("$(Build.SourcesDirectory)/drop/MasterVersion.txt", $content)
-          $Master= Get-Content $(Build.SourcesDirectory)/drop/MasterVersion.txt 
-          $assembly_version=$Master+'.'+$(buildVersion)
-          Write-Host $assembly_version
-          Write-Host "##vso[task.setvariable variable=assembly_version;isoutput=true]$assembly_version"
+          Write-Host "buildver: $(buildVersion)"
+
+          # PR builds: version by the branch the PR targets.
+          # Other builds: version by the branch being built.
+          if ($env:BUILD_REASON -eq 'PullRequest') {
+            $branch = $env:SYSTEM_PULLREQUEST_TARGETBRANCH
+          } else {
+            $branch = $env:BUILD_SOURCEBRANCH
           }
+          $branch = $branch -replace '^refs/heads/', ''
+          Write-Host "Resolved branch: $branch (reason: $env:BUILD_REASON)"
+
+          if ($branch -eq 'develop' -or $branch.StartsWith('feature/')) {
+            $file = "$(Build.SourcesDirectory)/drop/DevelopVersion.txt"
+          } else {
+            $file = "$(Build.SourcesDirectory)/drop/MasterVersion.txt"
+          }
+
+          # Trim and write back, as before
+          $content = [System.IO.File]::ReadAllText($file).Trim()
+          [System.IO.File]::WriteAllText($file, $content)
+
+          if ($content -notmatch '^\d+\.\d+(\.\d+)?$') { throw "Invalid version format: $content" }
+
+          $assembly_version = "$content.$(buildVersion)"
+          Write-Host $assembly_version
+          Write-Host "##vso[task.setvariable variable=assembly_version;isoutput=true]$assembly_version"
